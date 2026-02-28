@@ -4,9 +4,12 @@ The system consists of an ESP32-powered wearable device connected to a mobile ap
 
 Team Name: [Error 404]
 Team Members
+
 Member 1: [Francisa Thankachan] - [Govt. Model Engineering College, Thrikkakkara]
+
 Member 2: [Annada S] - [Govt. Model Engineering College, Thrikkakkara]
-Hosted Project Link
+
+# Hosted Project Link
 [mention your project hosted link here]
 
 # Project Description
@@ -17,35 +20,44 @@ The wearable includes a simple arm-and-trigger mechanism along with visual and a
 [In emergency situations, individuals often struggle to quickly alert trusted contacts or seek help due to panic, physical restraint, or limited access to their phones. Existing safety solutions may be slow, complex, or dependent on manually operating a mobile device during high-stress moments.
 There is a need for a reliable, fast, and easy-to-use personal safety system that allows users to trigger emergency alerts instantly through a dedicated wearable device, ensuring immediate communication and support when it matters most.]
 
-The Solution
+# The Solution
 [AEGIS addresses this problem by introducing a smart wearable safety device integrated with a mobile application through Bluetooth connectivity. The system allows users to activate emergency protocols instantly using a dedicated panic trigger on the wearable, eliminating the need to manually operate a phone during stressful situations.
 Once activated, the mobile application immediately executes predefined alert mechanisms to notify trusted contacts. The device also provides clear visual and audio feedback, ensuring the user is aware of the system’s status at all times.
 By combining embedded hardware and mobile technology, AEGIS delivers a fast, reliable, and user-friendly personal safety solution designed for real-world emergency scenarios.]
 
 # Technical Details
 Technologies/Components Used
+
 For Software:
 
 Languages used: [Kotlin, Java]
+
 Frameworks used: [e.g., React, Django, Spring Boot]
+
 Libraries used: [e.g., axios, pandas, JUnit]
+
 Tools used: [VS code, Github]
 
 For Hardware:
 
 Main components: [ESP32, HR04]
+
 Specifications: [Technical specifications]
+
 Tools required: [List tools needed]
 
 # Features
 List the key features of your project:
 
 Feature 1: [Instant Panic Activation: A dedicated hardware panic trigger allows users to activate emergency protocols immediately with a single press.]
+
 Feature 2: [Bluetooth-Based Wearable Integration: Seamless wireless communication between the ESP32 wearable and the mobile application ensures fast and reliable signal transmission.]
+
 Feature 3: [Trusted Contact Notification System: Upon activation, the system automatically alerts pre-configured trusted contacts to ensure rapid assistance.]
+
 Feature 4: [Real-Time System Status Indicators: Built-in visual (RGB LEDs) and audio indicators provide clear feedback on whether the device is disarmed, armed, or in panic mode.]
 
-Implementation
+# Implementation
 For Software:
 Installation
 [Installation commands - e.g., npm install, pip install -r requirements.txt]
