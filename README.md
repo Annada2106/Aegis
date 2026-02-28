@@ -117,7 +117,7 @@ App Flow Explain the user flow through your application
 
 Installation Guide
 For Android (APK):
-Download the APK from [Release Link]
+Download the APK from [Release Link][https://github.com/Annada2106/Aegis/releases/tag/APK]
 Enable "Install from Unknown Sources" in your device settings:
 Go to Settings > Security
 Enable "Unknown Sources"
