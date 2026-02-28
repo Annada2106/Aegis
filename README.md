@@ -3,6 +3,7 @@ AEGIS is a wearable-based personal safety system designed to provide immediate a
 The system consists of an ESP32-powered wearable device connected to a mobile application via Bluetooth. When the user activates panic mode, the wearable instantly communicates with the mobile app, triggering emergency protocols and alerting trusted contacts.
 
 Team Name: [Error 404]
+
 Team Members
 
 Member 1: [Francisa Thankachan] - [Govt. Model Engineering College, Thrikkakkara]
@@ -13,49 +14,44 @@ Member 2: [Annada S] - [Govt. Model Engineering College, Thrikkakkara]
 [mention your project hosted link here]
 
 # Project Description
-[AEGIS is a smart wearable safety system that connects an ESP32-based device to a mobile application via Bluetooth. With a dedicated panic trigger, the system allows users to instantly activate emergency protocols and notify trusted contacts during critical situations.
-The wearable includes a simple arm-and-trigger mechanism along with visual and audio indicators for system status. Designed for reliability and quick response, AEGIS combines embedded hardware and mobile technology to create a practical personal safety solution.]
+AEGIS is a smart wearable safety system that connects an ESP32-based device to a mobile application via Bluetooth. With a dedicated panic trigger, the system allows users to instantly activate emergency protocols and notify trusted contacts during critical situations.  
+The wearable includes a simple arm-and-trigger mechanism along with visual and audio indicators for system status. Designed for reliability and quick response, AEGIS combines embedded hardware and mobile technology to create a practical personal safety solution.
 
 # The Problem statement
-[In emergency situations, individuals often struggle to quickly alert trusted contacts or seek help due to panic, physical restraint, or limited access to their phones. Existing safety solutions may be slow, complex, or dependent on manually operating a mobile device during high-stress moments.
-There is a need for a reliable, fast, and easy-to-use personal safety system that allows users to trigger emergency alerts instantly through a dedicated wearable device, ensuring immediate communication and support when it matters most.]
+In emergency situations, individuals often struggle to quickly alert trusted contacts or seek help due to panic, physical restraint, or limited access to their phones. Existing safety solutions may be slow, complex, or dependent on manually operating a mobile device during high-stress moments.  
+There is a need for a reliable, fast, and easy-to-use personal safety system that allows users to trigger emergency alerts instantly through a dedicated wearable device, ensuring immediate communication and support when it matters most.
 
 # The Solution
-[AEGIS addresses this problem by introducing a smart wearable safety device integrated with a mobile application through Bluetooth connectivity. The system allows users to activate emergency protocols instantly using a dedicated panic trigger on the wearable, eliminating the need to manually operate a phone during stressful situations.
-Once activated, the mobile application immediately executes predefined alert mechanisms to notify trusted contacts. The device also provides clear visual and audio feedback, ensuring the user is aware of the system’s status at all times.
-By combining embedded hardware and mobile technology, AEGIS delivers a fast, reliable, and user-friendly personal safety solution designed for real-world emergency scenarios.]
+AEGIS addresses this problem by introducing a smart wearable safety device integrated with a mobile application through Bluetooth connectivity. The system allows users to activate emergency protocols instantly using a dedicated panic trigger on the wearable, eliminating the need to manually operate a phone during stressful situations.  
+Once activated, the mobile application immediately executes predefined alert mechanisms to notify trusted contacts. The device also provides clear visual and audio feedback, ensuring the user is aware of the system’s status at all times.  
+By combining embedded hardware and mobile technology, AEGIS delivers a fast, reliable, and user-friendly personal safety solution designed for real-world emergency scenarios.
 
 # Technical Details
 Technologies/Components Used
 
-For Software:
+For Software:  
+Languages used: Java  
+Frameworks used: Android SDK  
+Libraries used:   
+Bluetooth API (android.bluetooth) – For ESP32 communication  
+LocationManager API – For GPS location retrieval   
+SmsManager – For sending emergency SMS  
+NotificationCompat – For intruder & safe alerts  
+Vibrator API – For alert vibration    
+Tools used: VS CODE, GITHUB, ANDROID STUDIO  
 
-Languages used: [Kotlin, Java]
-
-Frameworks used: [e.g., React, Django, Spring Boot]
-
-Libraries used: [e.g., axios, pandas, JUnit]
-
-Tools used: [VS code, Github]
-
-For Hardware:
-
-Main components: [ESP32, HR04]
-
-Specifications: [Technical specifications]
-
+For Hardware:  
+Main components: ESP32, HC-SR04, RGB, BUZZER
+Specifications: [Technical specifications]  
 Tools required: [List tools needed]
 
 # Features
 List the key features of your project:
 
-Feature 1: [Instant Panic Activation: A dedicated hardware panic trigger allows users to activate emergency protocols immediately with a single press.]
-
-Feature 2: [Bluetooth-Based Wearable Integration: Seamless wireless communication between the ESP32 wearable and the mobile application ensures fast and reliable signal transmission.]
-
-Feature 3: [Trusted Contact Notification System: Upon activation, the system automatically alerts pre-configured trusted contacts to ensure rapid assistance.]
-
-Feature 4: [Real-Time System Status Indicators: Built-in visual (RGB LEDs) and audio indicators provide clear feedback on whether the device is disarmed, armed, or in panic mode.]
+Feature 1: Instant Panic Activation: A dedicated hardware panic trigger allows users to activate emergency protocols immediately with a single press.  
+Feature 2: Bluetooth-Based Wearable Integration: Seamless wireless communication between the ESP32 wearable and the mobile application ensures fast and reliable signal transmission.  
+Feature 3: Trusted Contact Notification System: Upon activation, the system automatically alerts pre-configured trusted contacts to ensure rapid assistance.  
+Feature 4: Real-Time System Status Indicators: Built-in visual (RGB LEDs) and audio indicators provide clear feedback on whether the device is disarmed, armed, or in panic mode.
 
 # Implementation
 For Software:
@@ -63,12 +59,23 @@ Installation
 [Installation commands - e.g., npm install, pip install -r requirements.txt]
 Run
 [Run commands - e.g., npm start, python app.py]
-For Hardware:
-Components Required
-[List all components needed with specifications]
 
-Circuit Setup
-[Explain how to set up the circuit]
+For Hardware:
+
+Components Required
+
+-ESP 32
+-Resistors
+-LED
+-HRO4 Sensor
+-Switch
+-Press Button
+-Buzzer
+-Resistors
+-Connecting Wires and Breadboard
+
+Circuit Setup  
+The circuit is set up by connecting the ESP32 microcontroller, the HC-SR04 ultrasonic sensor, and a buzzer on a breadboard using jumper wires. First, the HC-SR04 sensor is powered by connecting its VCC pin to the 5V pin of the ESP32 and its GND pin to the ESP32 ground. The Trig pin of the sensor is connected to a digital output pin of the ESP32 (for example, GPIO 5), and the Echo pin is connected to a digital input pin (such as GPIO 18). Since the Echo pin outputs 5V and the ESP32 operates at 3.3V logic, a voltage divider using resistors is recommended between the Echo pin and the ESP32 input pin to protect the board. The buzzer is connected by attaching its positive terminal to another digital GPIO pin (for example, GPIO 23) and its negative terminal to ground. Once powered through a USB cable, the ESP32 sends trigger pulses to the ultrasonic sensor, calculates the distance based on the returning echo signal, and activates the buzzer or sends alerts via Bluetooth if an object is detected within a predefined range.
 
 Project Documentation
 For Software:
@@ -103,37 +110,6 @@ Build Photos
 
 ![Final](Add photo of final product here) Explain the final build
 
-Additional Documentation
-For Web Projects with Backend:
-API Documentation
-Base URL: https://api.yourproject.com
-
-Endpoints
-GET /api/endpoint
-
-Description: [What it does]
-Parameters:
-param1 (string): [Description]
-param2 (integer): [Description]
-Response:
-{
-  "status": "success",
-  "data": {}
-}
-POST /api/endpoint
-
-Description: [What it does]
-Request Body:
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-Response:
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-[Add more endpoints as needed...]
 
 For Mobile Apps:
 App Flow Diagram
@@ -141,7 +117,6 @@ App Flow Explain the user flow through your application
 
 Installation Guide
 For Android (APK):
-
 Download the APK from [Release Link]
 Enable "Install from Unknown Sources" in your device settings:
 Go to Settings > Security
